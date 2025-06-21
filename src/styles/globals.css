@@ -1,26 +1,33 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gradient-to-br from-slate-900 to-gray-800 text-slate-100 antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: Custom scrollbar for a sleeker look (Webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.slate.800'); /* Or a darker shade from your palette */
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.600'); /* Or a lighter shade */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.slate.500');
+}
+
+/* Define a general "frosted glass" card style if you want a reusable component class */
+.frosted-card {
+  @apply bg-gray-700/30 backdrop-blur-lg shadow-xl rounded-xl;
+  /* Adjust opacity (e.g. /30) and blur (e.g. backdrop-blur-lg) as needed */
 }
