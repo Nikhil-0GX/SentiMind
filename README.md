@@ -1,40 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Sentimind - AI Sentiment Analysis
+
+Sentimind is a modern web application that analyzes the emotional tone of text using advanced AI technology. It provides users with a simple yet powerful tool to understand the sentiment behind any written content.
+
+## Features
+
+- **Instant Sentiment Analysis**: Determine if text has a positive, negative, or neutral emotional tone
+- **Sleek Modern UI**: Clean, responsive interface with a transparent "frosted glass" design
+- **Advanced AI Model**: Powered by a fine-tuned DistilBERT model from Hugging Face
+- **Detailed Explanations**: Learn how sentiment analysis works through the "How It Works" page
+
+## Technology Stack
+
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: Tailwind CSS
+- **AI/ML**: Hugging Face Transformers (@xenova/transformers)
+- **Deployment**: [Vercel](https://vercel.com)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js 16.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/nikhil-0gx/SentiMind.git
+   cd SentiMind
+
+Install dependencies
+
+BASH
+
+npm install
+# or
+yarn install
+Run the development server
+
+BASH
+
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser to see the application
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Collapse
+sentimind/
+├── public/                 # Static assets
+├── src/
+│   ├── app/                # App Router pages
+│   │   ├── about/          # About page
+│   │   ├── how-it-works/   # How It Works page
+│   │   ├── privacy/        # Privacy Policy page
+│   │   ├── terms/          # Terms of Service page
+│   │   ├── api/            # API routes
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Homepage
+│   ├── components/         # Reusable components
+│   ├── lib/                # Utility functions and libraries
+│   └── styles/             # Global styles
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── next.config.js          # Next.js configuration
+└── package.json            # Project dependencies and scripts
+Usage
+Enter or paste text into the textarea on the homepage
+Click "Analyze Sentiment"
+View the analysis result, which categorizes the text as positive, negative, or neutral
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Deployment
+This project is deployed at nikhil-0gx.github.io/SentiMind [Will be Deployed soon.]
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+How It Works
+Sentimind uses a machine learning model that has been trained on millions of text samples to recognize patterns associated with different emotional tones. The process works in these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+User submits text for analysis
+The text is processed by a DistilBERT model fine-tuned for sentiment classification
+The model evaluates the text and determines if it expresses a positive, negative, or neutral sentiment
+Results are displayed to the user with appropriate visual indicators
 
-## Learn More
+License
+This project is licensed under the MIT License.
 
-To learn more about Next.js, take a look at the following resources:
+Acknowledgments
+Hugging Face for their incredible transformer models
+Tailwind CSS for the utility-first CSS framework
+Next.js for the React framework
+Heroicons for the beautiful icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Author
+Nikhil - nikhil-0gx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Feedback and Contributions
+Feedback and contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This README provides comprehensive information about your project including installation instructions, usage guide, deployment options, and technical details. Feel free to modify any sections to better match your preferences or add additional information where needed.
+
+You can add additional sections like "Roadmap" for future plans or "Contributing Guidelines" if you want to encourage community contributions.
